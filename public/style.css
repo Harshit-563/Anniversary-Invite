@@ -40,22 +40,7 @@ body {
   margin: -10em auto 0 auto;
 }
 
-.candle {
-  background: #ffffff;
-  border-radius: 10px;
-  position: absolute;
-  top: 230px;
-  
-  margin-top: -8.33333333px;
-  width: 10px;
-  height: 70px;
-  left: 50%;
-  transform: translate(-50%, -80%);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-animation: in 500ms 6s ease-out forwards;
-          animation: in 500ms 6s ease-out forwards;
-}
+
 
 .candle:after,
 .candle:before {
@@ -82,15 +67,7 @@ body {
 }
 
 
-.fire {
-  border-radius: 100%;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  margin-left: -2.6px;
-  width: 6.66666667px;
-  height: 18px;
-}
+
 
 .fire:nth-child(1) {
   -webkit-animation: fire 2s 6.5s infinite;
