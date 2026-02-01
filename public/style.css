@@ -28,6 +28,8 @@ body {
 
 body {
   background: #ffc0cb;
+  position: relative;   
+  overflow-x: hidden;
   
   
 }
@@ -43,12 +45,12 @@ body {
   border-radius: 10px;
   position: absolute;
   top: 228px;
-  left: 50%;
-  margin-left: -5px;
+  
   margin-top: -8.33333333px;
   width: 10px;
   height: 70px;
-  transform: translateY(-300px);
+  left: 50%;
+  transform: translate(-50%, -300px);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-animation: in 500ms 6s ease-out forwards;
