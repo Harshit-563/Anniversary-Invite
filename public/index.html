@@ -221,21 +221,31 @@
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
     <script>
   function sendResponse(answer) {
-    fetch("api/rsvp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ response: answer })
-    })
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("msg").innerText = data.message;
-    })
-    .catch(() => {
-      document.getElementById("msg").innerText = "Something went wrong!";
+  fetch("/api/rsvp", {   // ✅ leading slash
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ response: answer })
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("msg").innerText =
+      "Thank you for your response ❤️";
+
+    // optional: disable buttons after submit
+    document.querySelectorAll(".btn").forEach(btn => {
+      btn.disabled = true;
+      btn.style.opacity = "0.6";
     });
-  }
+  })
+  .catch(() => {
+    document.getElementById("msg").innerText =
+      "Something went wrong. Please try again!";
+  });
+}
+
+  
 </script>
 <script>
 function openWhatsAppYes() {
