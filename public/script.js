@@ -99,17 +99,35 @@ function openWhatsAppNo() {
 
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
-const music = document.getElementById("bg-music");
-const btn = document.getElementById("music-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bg-music");
+  const btn = document.getElementById("music-btn");
 
-let isPlaying = false;
-
-document.addEventListener("click", () => {
-  if (!isPlaying) {
-    music.play();
-    isPlaying = true;
-    btn.textContent = "🔇 Mute Music";
+  if (!music || !btn) {
+    console.error("Music elements not found");
+    return;
   }
-}, { once: true });
 
+  let isPlaying = false;
+
+  btn.addEventListener("click", () => {
+    if (!isPlaying) {
+      music.play();
+      btn.textContent = "🔇 Mute Music";
+    } else {
+      music.pause();
+      btn.textContent = "🔊 Play Music";
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // optional: play on first user interaction
+  document.addEventListener("click", () => {
+    if (!isPlaying) {
+      music.play();
+      isPlaying = true;
+      btn.textContent = "🔇 Mute Music";
+    }
+  }, { once: true });
+});
 
