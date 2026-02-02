@@ -192,7 +192,8 @@
   From then to now, their journey has been nothing short of beautiful ✨<br>
   Your presence will make it even more special! <br>ON <br>19 February 2026💐
   <br>AT
-  <br> Kaustbh Bhai Ke Lawn Par<br>(Keshavpur,Prasad Institute Ke Samne,Jaunpur)
+  <br> Kaustbh Bhai Ke Lawn Par → JP Motels
+  <br>(Keshavpur,Prasad Institute Ke Samne,Jaunpur)
 </p>
 <br>
 
@@ -220,7 +221,7 @@
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
     <script>
   function sendResponse(answer) {
-    fetch("http://localhost:3000/rsvp", {
+    fetch("api/rsvp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -254,6 +255,14 @@ function openWhatsAppNo() {
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
 </script>
+<!-- 🎵 Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🔊 Music Toggle Button -->
+<button id="music-btn">🔊 Play Music</button>
+
 
 </body>
 </html>

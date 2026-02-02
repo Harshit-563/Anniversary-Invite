@@ -99,3 +99,17 @@ function openWhatsAppNo() {
 
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("music-btn");
+
+let isPlaying = false;
+
+document.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    isPlaying = true;
+    btn.textContent = "🔇 Mute Music";
+  }
+}, { once: true });
+
+
