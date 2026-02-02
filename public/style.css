@@ -172,10 +172,10 @@ body {
 
 .subtext {
   margin-top: 15px;
-  font-size: 30px;
+  font-size: 20px;
   opacity: 0.8;
   text-align: center;
-  color: #d94d16;
+  color: #170501;
 }
 
 
@@ -205,12 +205,11 @@ body {
 }
 .rsvp {
   text-align: center;
-  margin-top: 30px;
-  font-size: x-large;
+  margin-top: 30px;;
 }
 
 .rsvp-text {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -253,11 +252,13 @@ body {
 .btn.yes {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   color: #141212;
+  font-size: 20px;
 }
 
 .btn.no {
   background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
   color: #333;
+  font-size: 20px;
 }
 
 .btn:hover {
